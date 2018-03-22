@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,55 +24,92 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcp-JF-W75">
-                                <rect key="frame" x="124" y="129" width="126" height="36"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9qM-dI-Tx6">
+                                <rect key="frame" x="124" y="263" width="118" height="140"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pk2-oc-F7T">
+                                        <rect key="frame" x="12.5" y="0.0" width="93" height="35"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                        <state key="normal" title="Insert User"/>
+                                        <connections>
+                                            <action selector="insertUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tMk-CU-9U8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4x-br-JOs">
+                                        <rect key="frame" x="18.5" y="35" width="81" height="35"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                        <state key="normal" title="List User "/>
+                                        <connections>
+                                            <action selector="listUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ISp-tY-o2K"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmj-Fa-cko">
+                                        <rect key="frame" x="0.0" y="70" width="118" height="35"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                        <state key="normal" title="Update Users"/>
+                                        <connections>
+                                            <action selector="updateUsers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OAo-Zd-am4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WiP-hR-kJf">
+                                        <rect key="frame" x="4.5" y="105" width="109" height="35"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                        <state key="normal" title="Delete Users"/>
+                                        <connections>
+                                            <action selector="deleteUsers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RVe-ph-vUi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Rcp-JF-W75" secondAttribute="height" multiplier="7:2" id="5zT-Tm-YPN"/>
+                                    <constraint firstAttribute="width" constant="118" id="1AG-Uy-QVO"/>
+                                    <constraint firstAttribute="height" constant="140" id="7mv-Dn-rl3"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcp-JF-W75">
+                                <rect key="frame" x="124" y="461" width="126" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="126" id="0u6-5X-xka"/>
+                                    <constraint firstAttribute="height" constant="36" id="9ae-dQ-fcn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Create Table ">
-                                    <color key="titleColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="createTable:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cwn-7v-8pt"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pk2-oc-F7T">
-                                <rect key="frame" x="141" y="189" width="93" height="35"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
-                                <state key="normal" title="Insert User"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4x-br-JOs">
-                                <rect key="frame" x="147" y="245" width="81" height="35"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
-                                <state key="normal" title="List User "/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmj-Fa-cko">
-                                <rect key="frame" x="128" y="297" width="118" height="35"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
-                                <state key="normal" title="Update Users"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WiP-hR-kJf">
-                                <rect key="frame" x="133" y="352" width="109" height="35"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
-                                <state key="normal" title="Delete Users"/>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SQLite Demo " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCU-XE-aoh">
+                                <rect key="frame" x="113" y="98" width="149" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="149" id="2Ye-oy-JxZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="AIJ-d5-lsz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="0.61437821061643838" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="C4x-br-JOs" firstAttribute="top" secondItem="pk2-oc-F7T" secondAttribute="bottom" constant="21" id="0r6-SG-bo7"/>
-                            <constraint firstItem="pk2-oc-F7T" firstAttribute="top" secondItem="Rcp-JF-W75" secondAttribute="bottom" constant="24" id="3FQ-DQ-eEv"/>
-                            <constraint firstItem="pk2-oc-F7T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="141" id="7Xp-Lc-2lf"/>
-                            <constraint firstItem="WiP-hR-kJf" firstAttribute="top" secondItem="Jmj-Fa-cko" secondAttribute="bottom" constant="20" id="Smr-Ho-18E"/>
-                            <constraint firstItem="C4x-br-JOs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="147" id="Tk4-at-4Iy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rcp-JF-W75" secondAttribute="trailing" constant="125" id="YkR-Mt-aby"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jmj-Fa-cko" secondAttribute="trailing" constant="129" id="Zms-0P-1Hy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pk2-oc-F7T" secondAttribute="trailing" constant="141" id="clZ-ON-t4n"/>
-                            <constraint firstItem="Jmj-Fa-cko" firstAttribute="top" secondItem="C4x-br-JOs" secondAttribute="bottom" constant="17" id="eiw-h0-wm1"/>
-                            <constraint firstItem="Jmj-Fa-cko" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="128" id="gqk-EW-XNy"/>
-                            <constraint firstItem="Rcp-JF-W75" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="109" id="lna-Hb-SAD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WiP-hR-kJf" secondAttribute="bottom" constant="280" id="nHq-k2-QKn"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C4x-br-JOs" secondAttribute="trailing" constant="147" id="sVQ-HI-dd8"/>
-                            <constraint firstItem="WiP-hR-kJf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133" id="teU-qN-pIW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WiP-hR-kJf" secondAttribute="trailing" constant="133" id="uIt-HF-FqY"/>
-                            <constraint firstItem="Rcp-JF-W75" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="y6q-Qx-m3H"/>
+                            <constraint firstItem="bCU-XE-aoh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="78" id="5Ks-u6-8xT"/>
+                            <constraint firstItem="Rcp-JF-W75" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="6Ze-FN-kv6"/>
+                            <constraint firstItem="Rcp-JF-W75" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="9tb-dn-8Ru"/>
+                            <constraint firstItem="bCU-XE-aoh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="113" id="Gnk-uY-WVX"/>
+                            <constraint firstItem="bCU-XE-aoh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="113" id="U8K-hr-Ktq"/>
+                            <constraint firstItem="9qM-dI-Tx6" firstAttribute="top" secondItem="bCU-XE-aoh" secondAttribute="bottom" constant="135" id="bGU-Cz-7Y6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bCU-XE-aoh" secondAttribute="trailing" constant="113" id="cbP-It-JP2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9qM-dI-Tx6" secondAttribute="trailing" constant="133" id="dP9-yQ-tsB"/>
+                            <constraint firstItem="9qM-dI-Tx6" firstAttribute="top" secondItem="bCU-XE-aoh" secondAttribute="bottom" constant="135" id="eDU-kT-uhy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bCU-XE-aoh" secondAttribute="trailing" constant="113" id="gPi-o6-MI7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rcp-JF-W75" secondAttribute="trailing" constant="125" id="lYz-Ob-0m4"/>
+                            <constraint firstItem="Rcp-JF-W75" firstAttribute="top" secondItem="9qM-dI-Tx6" secondAttribute="bottom" constant="58" id="pBF-ml-0ig"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Rcp-JF-W75" secondAttribute="bottom" constant="170" id="pjE-rm-csK"/>
+                            <constraint firstItem="bCU-XE-aoh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="78" id="qus-ac-ego"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rcp-JF-W75" secondAttribute="trailing" constant="125" id="uon-r3-nM4"/>
+                            <constraint firstItem="9qM-dI-Tx6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="zcu-k8-05d"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
